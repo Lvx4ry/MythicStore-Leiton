@@ -1,0 +1,21 @@
+.navbar {
+  background-color: #3d348b !important;
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+.cartCounter {
+  background-color: #fff;
+  border-radius: 20px;
+  color: #3d348b;
+  padding: 1px 7px 3px 7px;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 20px;
+    text-align: start;
+  }
+}

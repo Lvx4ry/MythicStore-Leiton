@@ -1,14 +1,7 @@
 import "./styles.css";
 import CartWidget from "./CartWidget";
 import SearchBar from "./SearchBar";
-
-/* const Header = () => {
-  return (
-    <header className="header">
-      <NavBar />
-    </header>
-  );
-}; */
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -16,12 +9,13 @@ const NavBar = () => {
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid justify-content-end">
           <div className="col-lg-3 col-12">
-            <a
-              className="navbar-brand ps-2 text-light text-center text-lg-start"
+            <NavLink
+              to="/"
+              className="navbar-brand px-2 text-light text-center text-lg-start"
               href="#"
             >
               Mythic Store
-            </a>
+            </NavLink>
           </div>
           <SearchBar />
           <button
@@ -41,21 +35,33 @@ const NavBar = () => {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link text-light" href="#">
-                  Ofertas
-                </a>
+                <NavLink
+                  to="/category/staffs"
+                  className="nav-link text-light"
+                  href="#"
+                >
+                  Staffs
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light" href="#">
-                  Vender
-                </a>
+                <NavLink
+                  to="/category/swords"
+                  className="nav-link text-light"
+                  href="#"
+                >
+                  Swords
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light" href="#">
-                  Ingresar
-                </a>
+                <NavLink
+                  to="/category/shields"
+                  className="nav-link text-light"
+                  href="#"
+                >
+                  Shields
+                </NavLink>
               </li>
-              <li className="nav-item">
+              <li className="nav-item px-2">
                 <CartWidget numberOfProducts={3} />
               </li>
             </ul>

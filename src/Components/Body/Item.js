@@ -7,7 +7,7 @@ export default function Item({ item }) {
       <>
         <Link
           to={"/item/" + item.id}
-          className="card col-8 col-md-4 col-lg-2 border-dark my-3 mx-1"
+          className="card col-8 col-md-3 col-lg-2 border-dark my-3 mx-1"
         >
           <div className="img-container ">
             <img

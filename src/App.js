@@ -25,7 +25,6 @@ function App() {
               greeting={"Mythic Store, your virtual items e-commerce!"}
             />
           }
-          errorElement={<Empty />}
         />
         <Route
           path="/item/:itemID"

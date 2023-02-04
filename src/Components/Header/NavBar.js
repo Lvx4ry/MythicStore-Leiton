@@ -1,7 +1,7 @@
 import "./styles.css";
 import CartWidget from "./CartWidget";
 import SearchBar from "./SearchBar";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -9,13 +9,12 @@ const NavBar = () => {
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid justify-content-end">
           <div className="col-lg-3 col-12">
-            <NavLink
+            <Link
               to="/"
               className="navbar-brand px-2 text-light text-center text-lg-start"
-              href="#"
             >
               Mythic Store
-            </NavLink>
+            </Link>
           </div>
           <SearchBar />
           <button
@@ -35,29 +34,17 @@ const NavBar = () => {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink
-                  to="/category/staffs"
-                  className="nav-link text-light"
-                  href="#"
-                >
+                <NavLink to="/category/staffs" className="nav-link text-light">
                   Staffs
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  to="/category/swords"
-                  className="nav-link text-light"
-                  href="#"
-                >
+                <NavLink to="/category/swords" className="nav-link text-light">
                   Swords
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  to="/category/shields"
-                  className="nav-link text-light"
-                  href="#"
-                >
+                <NavLink to="/category/shields" className="nav-link text-light">
                   Shields
                 </NavLink>
               </li>

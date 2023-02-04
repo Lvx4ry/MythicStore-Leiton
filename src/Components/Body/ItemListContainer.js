@@ -7,7 +7,6 @@ import "./styles.css";
 export default function ItemListContainer({ greeting }) {
   const [productList, setProductList] = useState([]);
   const { categoryName } = useParams();
-  console.log(categoryName);
 
   useEffect(() => {
     if (categoryName) {
@@ -20,7 +19,7 @@ export default function ItemListContainer({ greeting }) {
   return (
     <main>
       <div className="container-fluid">
-        <h1 className="fs-2 text-center">{greeting}</h1>
+        <h1 className="fs-2 my-2 text-center">{greeting}</h1>
         <ItemList productArray={productList} />
       </div>
     </main>

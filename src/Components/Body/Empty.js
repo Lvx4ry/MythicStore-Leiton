@@ -1,4 +1,7 @@
+import { useRouteError } from "react-router-dom";
+
 export default function Empty() {
+  let error = useRouteError();
   return (
     <main>
       <div className="container-fluid justify-content-center">

@@ -3,6 +3,7 @@ import ItemListContainer from "./Components/Body/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/Header/NavBar";
 import ItemDetailContainer from "./Components/Body/ItemDetailContainer";
+import Empty from "./Components/Body/Empty";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               greeting={"Mythic Store, your virtual items e-commerce!"}
             />
           }
+          errorElement={<Empty />}
         />
         <Route
           path="/item/:itemID"
@@ -33,6 +35,7 @@ function App() {
             />
           }
         />
+        <Route path="*" element={<Empty />} />
       </Routes>
     </BrowserRouter>
   );

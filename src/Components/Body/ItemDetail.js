@@ -1,9 +1,8 @@
 import { useState } from "react";
+import ItemCount from "./ItemCount";
 import "./styles.css";
 
 export default function ItemDetail({ item }) {
-  let [itemAmount, setItemAmount] = useState(1);
-
   return (
     <div className="container mt-5 mb-5">
       <div className="row d-flex justify-content-center">
@@ -38,20 +37,7 @@ export default function ItemDetail({ item }) {
                   <p className="about">{item.description}</p>
 
                   <div className="cart mt-4 align-items-center">
-                    <div className="col-lg-4 my-2">
-                      <h6>Quantity :</h6>
-                      <input
-                        type="number"
-                        pattern="[0-9]"
-                        className="form-control text-center"
-                        defaultValue={itemAmount}
-                      />
-                    </div>
-                    <button className="btn text-uppercase mr-2 px-4">
-                      Add to cart
-                    </button>{" "}
-                    <i className="fa fa-heart text-muted"></i>{" "}
-                    <i className="fa fa-share-alt text-muted"></i>{" "}
+                    <ItemCount stock={item.stock} />
                   </div>
                 </div>
               </div>

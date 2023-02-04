@@ -43,3 +43,7 @@ a {
 .main-image {
   width: 70%;
 }
+
+.quantity-button {
+  width: 2.5rem;
+}

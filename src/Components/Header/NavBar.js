@@ -49,7 +49,7 @@ const NavBar = () => {
                 </NavLink>
               </li>
               <li className="nav-item px-2">
-                <CartWidget numberOfProducts={3} />
+                <CartWidget />
               </li>
             </ul>
           </div>

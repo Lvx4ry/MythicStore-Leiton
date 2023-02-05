@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { context } from "../Context/CustomProvider";
 import ItemCount from "./ItemCount";
 import "./styles.css";
 
 export default function ItemDetail({ item }) {
+  const { addProduct } = useContext(context);
+
+  const handleAdd = (itemCount) => {
+    const contabilizedItem = { ...item, quantity: itemCount };
+    addProduct(contabilizedItem, itemCount);
+  };
+
   return (
     <div className="container mt-5 mb-5">
       <div className="row d-flex justify-content-center">
@@ -37,7 +45,7 @@ export default function ItemDetail({ item }) {
                   <p className="about">{item.description}</p>
 
                   <div className="cart mt-4 align-items-center">
-                    <ItemCount stock={item.stock} />
+                    <ItemCount stock={item.stock} handleAdd={handleAdd} />
                   </div>
                 </div>
               </div>

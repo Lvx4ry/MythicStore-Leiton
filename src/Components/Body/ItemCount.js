@@ -4,15 +4,15 @@ import "./styles.css";
 export default function ItemCount({ stock, handleAdd }) {
   let [itemCount, setItemCount] = useState(1);
 
-  const add = () => {
+  const countAdd = () => {
     itemCount <= stock && setItemCount(itemCount + 1);
   };
 
-  const substract = () => {
+  const countSubstract = () => {
     itemCount > 1 && setItemCount(itemCount - 1);
   };
 
-  const confirm = () => {
+  const confirmBuy = () => {
     handleAdd(itemCount);
   };
 
@@ -24,7 +24,7 @@ export default function ItemCount({ stock, handleAdd }) {
           <button
             type="button"
             className="btn btn-outline-dark quantity-button"
-            onClick={substract}
+            onClick={countSubstract}
           >
             -
           </button>
@@ -33,14 +33,14 @@ export default function ItemCount({ stock, handleAdd }) {
           <button
             type="button"
             className="btn btn-outline-dark quantity-button"
-            onClick={add}
+            onClick={countAdd}
             disabled={itemCount === stock}
           >
             +
           </button>
         </div>
       </div>
-      <button className="btn text-uppercase px-3" onClick={confirm}>
+      <button className="btn text-uppercase px-3" onClick={confirmBuy}>
         Add to cart
       </button>
     </>

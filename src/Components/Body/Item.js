@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Spinner from "./Spinner";
+
 import "./styles.css";
 
 export default function Item({ item }) {

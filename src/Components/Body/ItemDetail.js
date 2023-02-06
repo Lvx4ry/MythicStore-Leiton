@@ -7,7 +7,8 @@ export default function ItemDetail({ item }) {
   const { addProduct } = useContext(context);
 
   const handleAdd = (itemCount) => {
-    const contabilizedItem = { ...item, quantity: itemCount };
+    const timeStamp = "a las 4";
+    const contabilizedItem = { ...item, quantity: itemCount, time: timeStamp };
     addProduct(contabilizedItem, itemCount);
   };
 
@@ -45,7 +46,11 @@ export default function ItemDetail({ item }) {
                   <p className="about">{item.description}</p>
 
                   <div className="cart mt-4 align-items-center">
-                    <ItemCount stock={item.stock} handleAdd={handleAdd} />
+                    <ItemCount
+                      stock={item.stock}
+                      handleAdd={handleAdd}
+                      calledFrom="ItemDetail"
+                    />
                   </div>
                 </div>
               </div>

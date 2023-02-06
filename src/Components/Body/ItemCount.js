@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./styles.css";
 
 export default function ItemCount({ stock, handleAdd }) {

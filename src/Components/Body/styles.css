@@ -30,8 +30,12 @@ a {
   text-shadow: 0px 0px 0 #000;
 }
 
-.btn {
+.btn:not(.btn-danger, .btn-success) {
   background-color: #3d348b;
+}
+
+.btn,
+.btn-danger {
   color: white;
 }
 

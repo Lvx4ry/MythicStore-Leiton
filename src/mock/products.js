@@ -51,6 +51,6 @@ export const products = [
     img: "https://www.divine-pride.net/img/items/collection/iRO/21051",
     stock: 2,
     game: "Ragnarok Online",
-    description: "	A Two-Handed sword made of Black Light.",
+    description: "A Two-Handed sword made of Black Light.",
   },
 ];

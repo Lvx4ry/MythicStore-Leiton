@@ -6,7 +6,7 @@ import "./styles.css";
 export default function CartWidget() {
   const { cartQuantity } = useContext(context);
   return (
-    <NavLink to="/cart" className="nav-link text-light">
+    <NavLink to="/cart" className="nav-link text-light d-flex flex-nowrap">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"

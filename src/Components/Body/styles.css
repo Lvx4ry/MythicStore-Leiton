@@ -51,3 +51,8 @@ a {
 .quantity-button {
   width: 2.5rem;
 }
+
+.form-container {
+  background-color: #3d348b !important;
+  color: white !important;
+}

@@ -22,7 +22,10 @@ export default function CartCounter({
   return (
     <>
       <h6 className="py-2 col-12">Quantity :</h6>
-      <div className="quantity-container d-flex align-items-start justify-content-start justify-content-md-between justify-content-lg-start col-12">
+      <div
+        className="quantity-container d-flex align-items-start justify-content-start
+       justify-content-md-between justify-content-lg-start col-12"
+      >
         <button
           type="button"
           className="btn btn-outline-dark quantity-button"

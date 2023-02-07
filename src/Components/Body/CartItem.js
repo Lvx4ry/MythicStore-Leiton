@@ -45,7 +45,7 @@ export default function CartItem({ item }) {
                 <small className="text-muted">Added at: {item.time}</small>
               </p>
             </div>
-            <div className="col-12 col-md-4 p-2 d-flex flex-column justify-content-end align-items-start mx-3 my-2 flex-wrap">
+            <div className="col-12 col-md-4 col-lg-5 p-2 d-flex flex-column justify-content-end align-items-start mx-3 my-2 flex-wrap">
               <CartCounter
                 item={item}
                 handleAddFromCart={handleAddFromCart}

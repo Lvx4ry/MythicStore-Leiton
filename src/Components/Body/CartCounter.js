@@ -6,9 +6,6 @@ export default function CartCounter({
   handleRemoveUnit,
   handleRemoveTotal,
 }) {
-  //const { handleAddFromCart, handleRemoveUnit, handleRemoveTotal } =
-  //cartFunctions;
-
   const cartCounterAdd = () => {
     handleAddFromCart();
   };

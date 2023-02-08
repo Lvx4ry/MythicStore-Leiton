@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { products } from "../../mock/products";
+
 import ItemDetail from "./ItemDetail";
 import Spinner from "./Spinner";
 import { productsCollection } from "../../firebaseConfig";
@@ -23,7 +23,6 @@ export default function ItemDetailContainer({ greeting }) {
 
   useEffect(() => {
     getProduct();
-    setItem(products.find((item) => item.id === Number(itemID)));
   }, [itemID]);
 
   return item ? (

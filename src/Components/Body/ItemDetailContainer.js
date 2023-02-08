@@ -10,18 +10,17 @@ export default function ItemDetailContainer({ greeting }) {
   const [item, setItem] = useState({});
   const { itemID } = useParams();
 
-  const getProduct = () => {
-    const docReference = doc(productsCollection, itemID);
-    const dbQuery = getDoc(docReference);
-
-    dbQuery.then((res) => {
-      const product = res.data();
-
-      setItem({ ...product, id: res.id });
-    });
-  };
-
   useEffect(() => {
+    const getProduct = () => {
+      const docReference = doc(productsCollection, itemID);
+      const dbQuery = getDoc(docReference);
+
+      dbQuery.then((res) => {
+        const product = res.data();
+
+        setItem({ ...product, id: res.id });
+      });
+    };
     getProduct();
   }, [itemID]);
 

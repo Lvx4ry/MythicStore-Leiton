@@ -16,7 +16,7 @@ export default function ItemDetailContainer({ greeting }) {
 
     dbQuery.then((res) => {
       const product = res.data();
-      console.log({ ...product, id: res.id });
+
       setItem({ ...product, id: res.id });
     });
   };
@@ -32,8 +32,6 @@ export default function ItemDetailContainer({ greeting }) {
       <ItemDetail item={item} />
     </div>
   ) : (
-    <div className="container col-12 d-flex justify-content-center">
-      <Spinner />
-    </div>
+    <Spinner />
   );
 }

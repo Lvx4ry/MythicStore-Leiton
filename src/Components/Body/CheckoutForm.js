@@ -1,6 +1,6 @@
 import { addDoc, serverTimestamp } from "firebase/firestore";
 import { useContext, useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { soldCollection } from "../../firebaseConfig";
 
 import { context } from "../Context/CustomProvider";
@@ -15,6 +15,7 @@ export default function CheckoutForm() {
   let [validEmail, setValidEmail] = useState(false);
   let [validPhone, setValidPhone] = useState(false);
   let [validCard, setValidCard] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const sendCheckout = () => {
@@ -25,10 +26,13 @@ export default function CheckoutForm() {
 
       const query = addDoc(soldCollection, datedData);
 
-      query.then((res) => handleBuy(res.id));
-      clearCart();
-    };
+      query.then((res) => {
+        handleBuy(datedData.order_number);
+      });
 
+      clearCart();
+      navigate("/finished");
+    };
     checkoutFinished && sendCheckout();
   }, [checkoutFinished]);
 
@@ -83,13 +87,11 @@ export default function CheckoutForm() {
       order_number: orderNumber,
     });
 
-    setCheckoutFinished(Object.keys(customerData).length === 8 ? true : false);
+    setCheckoutFinished(Object.keys(customerData).length === 9 ? true : false);
   };
 
   return cart.length < 1 ? (
     <Navigate to="/cart" />
-  ) : checkoutFinished ? (
-    <Navigate to="/" />
   ) : (
     <div className="my-1 container px-1 py-5 mx-auto">
       <div className="my-1 row d-flex justify-content-center">

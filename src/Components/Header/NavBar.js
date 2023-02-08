@@ -2,13 +2,20 @@ import "./styles.css";
 import CartWidget from "./CartWidget";
 import SearchBar from "./SearchBar";
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const NavBar = () => {
+  let [visibleNav, setVisibleNav] = useState(false);
+
+  const handleNavButton = () => {
+    setVisibleNav(!visibleNav);
+  };
+
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <div className="container-fluid justify-content-between">
-          <div className="col-lg-3 col-md-4 col-12 d-flex flex-row justify-content-center justify-content-md-start">
+      <nav className="navbar navbar-expand-lg navbar-light pt-2">
+        <div className="container-fluid justify-content-between justify-content-md-evenly ">
+          <div className="col-lg-3 col-md-4 col-12 d-flex flex-row justify-content-center justify-content-lg-start">
             <Link
               to="/"
               className="navbar-brand px-2 text-light text-center text-lg-start "
@@ -25,20 +32,23 @@ const NavBar = () => {
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={handleNavButton}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            className="collapse navbar-collapse d-flex col-3 justify-content-start justify-content-lg-end "
+            className={`${
+              visibleNav ? "d-flex" : "d-none"
+            } collapse navbar-collapse col-3 justify-content-center justify-content-lg-end`}
             id="navbarNav"
           >
-            <ul className="navbar-nav gap-2 ms-4 ms-2-lg">
+            <ul className="navbar-nav gap-2 justify-content-center col-10 col-lg-10 justify-content-lg-end">
               <li className="nav-item">
                 <NavLink
-                  to="/category/staffs"
+                  to="/category/staves"
                   className="nav-link text-light  "
                 >
-                  Staffs
+                  Staves
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -57,7 +67,7 @@ const NavBar = () => {
                   Shields
                 </NavLink>
               </li>
-              <li className="nav-item px-2">
+              <li className="nav-item">
                 <CartWidget />
               </li>
             </ul>

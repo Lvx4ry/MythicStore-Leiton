@@ -7,9 +7,9 @@ export default function SearchBar() {
 
   let [localSearchInput, setLocalSearchInput] = useState("");
 
-  /* useEffect(() => {
-    saveSearch(localSearchInput);
-  }, [localSearchInput]); */
+  useEffect(() => {
+    localSearchInput.length === 0 && handleSearch();
+  }, [localSearchInput]);
 
   const handleChange = (e) => {
     setLocalSearchInput(e.target.value);

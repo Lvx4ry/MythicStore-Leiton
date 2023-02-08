@@ -12,7 +12,7 @@ export default function Cart() {
         {cart.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}
-        <div className="col-8 col-lg-6 d-flex flex-row justify-content-end">
+        <div className="col-8 col-lg-6 d-flex flex-row flex-wrap justify-content-end">
           <h3 className="col-11 col-md-6">Total Price: ${cartTotalPrice}</h3>
           <Link to="/payment" className="btn btn-success col-md-4">
             Finish Shopping

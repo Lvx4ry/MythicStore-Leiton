@@ -8,6 +8,7 @@ export default function CartProvider({ children }) {
   let [cart, setCart] = useState([]);
   let [cartQuantity, setCartQuantity] = useState(0);
   let [cartTotalPrice, setCartTotalPrice] = useState(0);
+  let [buyOrder, setBuyOrder] = useState();
 
   useEffect(() => {
     setCartQuantity(
@@ -75,14 +76,24 @@ export default function CartProvider({ children }) {
     cart.includes(newProduct);
   };
 
+  const handleBuy = (orderNum) => {
+    setBuyOrder(orderNum);
+  };
+
+  const removeOrder = () => {
+    setBuyOrder();
+  };
+
   const contextValue = {
     cart,
     cartQuantity,
     cartTotalPrice,
+    buyOrder,
     addProduct,
     clearCart,
     findProduct,
     removeProduct,
+    handleBuy,
   };
 
   return <Provider value={contextValue}>{children}</Provider>;

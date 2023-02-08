@@ -7,7 +7,8 @@ import Empty from "./Components/Body/Empty";
 import CartProvider from "./Components/Context/CustomProvider";
 import Cart from "./Components/Body/Cart";
 import SearchProvider from "./Components/Context/SearchProvider";
-import BuyForm from "./Components/Body/BuyForm";
+import CheckoutForm from "./Components/Body/CheckoutForm";
+import Finished from "./Components/Body/Finished";
 
 function App() {
   return (
@@ -41,7 +42,9 @@ function App() {
               }
             />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/payment" element={<BuyForm />} />
+            <Route path="/payment" element={<CheckoutForm />} />
+            <Route path="/finished" element={<Finished />} />
+
             <Route path="*" element={<Empty />} />
           </Routes>
         </BrowserRouter>

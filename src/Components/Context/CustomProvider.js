@@ -94,6 +94,7 @@ export default function CartProvider({ children }) {
     findProduct,
     removeProduct,
     handleBuy,
+    removeOrder,
   };
 
   return <Provider value={contextValue}>{children}</Provider>;

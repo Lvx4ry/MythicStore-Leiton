@@ -26,9 +26,6 @@ export default function Finished() {
     };
     timer();
   }, []);
-  {
-    console.log(returnValue);
-  }
 
   return returnValue === "Spinner" ? (
     <Spinner />

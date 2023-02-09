@@ -13,7 +13,7 @@ const NavBar = () => {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light pt-2">
+      <nav className="navbar navbar-expand-lg navbar-light py-">
         <div className="container-fluid justify-content-between justify-content-md-evenly ">
           <div className="col-lg-3 col-md-4 col-12 d-flex flex-row justify-content-center justify-content-lg-start">
             <Link

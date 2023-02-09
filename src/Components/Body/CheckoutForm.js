@@ -30,8 +30,9 @@ export default function CheckoutForm() {
         handleBuy(datedData.order_number);
       });
 
-      clearCart();
-      navigate("/finished");
+      setTimeout(() => {
+        navigate("/finished");
+      }, 2000);
     };
     checkoutFinished && sendCheckout();
   }, [checkoutFinished]);
@@ -40,6 +41,10 @@ export default function CheckoutForm() {
   const maxPhoneLength = 15;
   const cardMinLength = 13;
   const cardMaxLength = 19;
+
+  const finishCheckout = () => {
+    setCheckoutFinished(true);
+  };
 
   const handleInputChange = (e) => {
     const key = e.target.name;
@@ -87,7 +92,7 @@ export default function CheckoutForm() {
       order_number: orderNumber,
     });
 
-    setCheckoutFinished(Object.keys(customerData).length === 9 ? true : false);
+    Object.keys(customerData).length === 9 && finishCheckout();
   };
 
   return cart.length < 1 ? (

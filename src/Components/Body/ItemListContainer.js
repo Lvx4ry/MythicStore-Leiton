@@ -55,7 +55,7 @@ export default function ItemListContainer({ greeting }) {
     getProducts(filteringQuery);
   }, [categoryName]);
 
-  return productList ? (
+  return productList.length > 0 ? (
     <main>
       <div className="container-fluid">
         <h1 className="fs-2 my-2 text-center">{greeting}</h1>

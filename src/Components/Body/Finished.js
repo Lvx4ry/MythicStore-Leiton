@@ -21,7 +21,7 @@ export default function Finished() {
 
       const timeOut = setTimeout(() => {
         clearInterval(interval);
-        setReturnValue("Redirect");
+        !buyOrder && setReturnValue("Redirect");
       }, 5000);
     };
     timer();

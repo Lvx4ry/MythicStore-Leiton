@@ -31,18 +31,15 @@ export default function CartItem({ item }) {
             <img
               src={item.img}
               className="img-fluid rounded-start"
-              alt={`${item.name} Image`}
+              alt={`${item.name}'s Image`}
             />
           </div>
           <div className="col-md-8  d-flex flex-column flex-md-row align-items-center">
             <div className="card-body col-12 col-md-8">
-              <h4 className="card-title">{item.name}</h4>
-              <h6 className="card-subtitle">${item.price} /u </h6>
+              <h4 className="card-title py-1">{item.name}</h4>
+              <h6 className="card-subtitle py-1">${item.price} /u </h6>
               <p className="card-text col-12 col-md-7 my-1">
                 {abreviatedDescription}
-              </p>
-              <p className="card-text">
-                <small className="text-muted">Added at: {item.time}</small>
               </p>
             </div>
             <div className="col-12 col-md-4 col-lg-5 p-2 d-flex flex-column justify-content-end align-items-start mx-3 my-2 flex-wrap">

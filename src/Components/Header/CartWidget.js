@@ -6,11 +6,11 @@ import "./styles.css";
 export default function CartWidget() {
   const { cartQuantity } = useContext(context);
   return (
-    <NavLink to="/cart" className="nav-link text-light d-flex flex-nowrap">
+    <NavLink to="/cart" className="nav-link text-light d-flex flex-nowrap ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
+        width="18"
+        height="18"
         fill="currentColor"
         className="bi bi-cart2 mb-1"
         viewBox="0 0 16 16"

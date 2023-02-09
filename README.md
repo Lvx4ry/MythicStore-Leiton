@@ -13,8 +13,7 @@ Want to try it out now? <a href="https://mythic-store-leiton.vercel.app/">Click 
 
 <p align="center">
 <a href="#how-to-use">How To Use</a> •
-<a href="#technologies">Technologies Used</a>•
-    <a href="#credits">Credits</a> 
+<a href="#credits">Credits</a> 
   
 </p>
 

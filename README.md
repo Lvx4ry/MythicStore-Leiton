@@ -19,6 +19,8 @@ Want to try it out now? <a href="https://mythic-store-leiton.vercel.app/">Click 
 
 ## How To Use
 
+You can visit the already deployed app <a href="https://mythic-store-leiton-bn7ed282f-lvx4ry.vercel.app">HERE</a> or clone it and execute it in your own device.
+
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
